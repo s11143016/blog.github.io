@@ -1,0 +1,368 @@
+body,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+ 
+}
+html{
+  scroll-behavior: smooth;
+}
+.btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+ 
+}
+.buttons {
+  width: 43px; /* 设置按钮的宽度 */
+  height: 43px; /* 设置按钮的高度 */
+  margin: 4px 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+  background-color: #62adfd;
+  color: #fff;
+  border: none;
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+  transition: all .3s;
+  
+}
+.buttons span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all .3s;
+}
+.buttons:hover{
+  cursor: pointer;
+  background-color: #4aa1ff;
+}
+.header {
+  display: flex;
+  height: 720px;
+  overflow: hidden;
+  position: relative;
+}
+.header .pic img {
+  width: 350px;
+  height: auto;
+  position: absolute;
+  top: 5px;
+  right: 39vw;
+  border-radius: 10px;
+  opacity: 1;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+.header .asd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: calc(33.33% + 600px);
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+.header .asd p {
+  padding: 5px 0;
+  font-size: 22px;
+  color: #3b3b3b;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+.header .asd .self p {
+  line-height: 1.5;
+  padding: 5px;
+  font-size: 19px;
+  color: #3b3b3b;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+.pic2 {
+  margin: 2px;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+.pic2 a {
+  text-decoration: none;
+}
+.pic2 a img {
+  position: relative;
+  transition: all 0.2s;
+  padding: 0 5px;
+}
+.pic2 img:hover {
+  opacity: 0.65;
+}
+.fb {
+  width: 44px;
+  height: auto;
+}
+
+.about {
+  padding: 30px 0;
+  background-color: #b6b6b674;
+  height: 415px;
+}
+
+.about .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.about .item {
+  width: 300px;
+  margin: 0 10px;
+  text-align: center;
+  flex-basis: calc(33.33% - 20px);
+}
+.about h3 {
+  color: #3b3b3b;
+}
+.about .item img {
+  border-radius: 30%;
+  padding: 20px;
+  width: 22%;
+  height: 32%;
+}
+
+.about .item p {
+  font-size: 20px;
+  padding: 3px 0;
+  color: #393939;
+  font-weight: bold;
+}
+
+.about > h2 {
+  width: 960px;
+  font-size: 42px;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+}
+
+.about > p {
+  width: 660px;
+  margin: auto;
+  padding: 20 0px 40px;
+  text-align: center;
+  font-weight: lighter;
+}
+@keyframes goRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-10.5%);
+  }
+}
+@keyframes goLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+}
+@keyframes godown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.square1 {
+  width: 1000px;
+  height: 400px;
+  background: rgba(233, 255, 136, 0.5);
+  top: 0;
+  left: 1px;
+  z-index: -1;
+  opacity: 0;
+  animation: goRight 1.28s ease-in-out forwards;
+  position: absolute;
+}
+.square2 {
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  background: rgba(167, 254, 127, 0.411);
+  top: 21vw;
+  left: 95vw;
+  z-index: -2;
+  position: absolute;
+  animation: goLeft 1.2s ease-in-out forwards;
+}
+.circle1 a {
+  width: 360px;
+  height: 360px;
+  display: inline-block;
+  top: -9vw;
+  left: 80vw;
+  background: rgb(147, 206, 255);
+  border-radius: 999em;
+  animation: godown 1.5s ease-in-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+}
+.circle1 p {
+  margin: 100px 20px;
+  font-size: 21px;
+  color: #303030;
+}
+.timeline {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* 垂直布局 */
+ /*  justify-content: center; 垂直居中 */
+  align-items: center; /* 水平居中 */
+  height: 80vh; /* 使时间轴占据整个视口高度 */
+}
+.timeline>h5{
+  width: 960px;
+  font-size: 42px;
+  text-align: center;
+  padding: 20px 0;
+  margin: 15px 0;
+}
+
+.line {
+  width: 4.5px;
+  height: 130px; /* 直线的高度填充整个事件容器 */
+  background-color: #a78150; /* 直线的颜色 */
+  margin-right: 65px; /* 调整直线与学历事件内容的间距 */
+}
+/* 学历事件的样式 */
+.event {
+  display: flex;
+  align-items: center;
+  /* margin: 5px;  */
+  max-width: 400px; /* 限制事件内容的最大宽度 */
+  position: relative; /* 使大点相对于事件定位 */
+  margin-left: 50px;
+}
+.event-content {
+  width: auto;
+  padding:15px 20px;
+  background-color: #ffffff; /* 学历事件的背景色 */
+  border: 1px solid #ff8e38; /* 学历事件的边框 */
+  border-radius: 5px;
+  text-align: center;
+  flex: 1;  /*自动填充剩余空间 */
+  font-size: 20px;
+}
+.event-content ul {
+  padding-left: 20px; /* 设置左边距以控制项目符号的位置 */
+  list-style: disc; /* 设置项目符号样式为实心圆点 */
+}
+.event-content li {
+  margin: 5px 0; /* 控制列表项的上下外边距 */
+}
+.bullet.left {
+  position: absolute;
+  left: -7px; /* 控制大点在事件左侧的位置 */
+  width: 30px;
+  height: 30px;
+  background-color: #ff8e38;
+  transform:rotate(134deg);
+  border-radius: 11px 80px 80px 80px; /* 使大点成为圆形 */
+}
+/* .etimg {
+  position: absolute;
+  margin: 5px;
+  display: none;
+  width:28%;
+  height:auto;
+  left: 950px;
+  border-radius: 5px;
+}
+.img2{
+  top: 20%;
+}
+.et1:hover + .img1 {
+  display: block;
+}
+.et2:hover + .img2{
+  display: block;
+} */
+
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.7;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 87px solid #3498db;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: #e74c3c;
+  border-radius: 50%;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background: #27ae60;
+}
+
+.rectangle {
+  width: 150px;
+  height: 75px;
+  background: #f1c40f;
+}
+
+.hexagon {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 87px solid #9b59b6;
+}
+
+.octagon {
+  width: 0;
+  height: 0;
+  border-top: 50px solid #34495e;
+  border-bottom: 50px solid #34495e;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}

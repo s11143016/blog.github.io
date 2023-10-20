@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="SelfIntroduction.css">
+    <title>自我介紹</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const background = document.querySelector('.background');
+            const shapes = ['triangle', 'circle', 'square', 'rectangle', 'hexagon', 'octagon'];
+            function createRandomShape() {
+                const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
+                const shape = document.createElement('div');
+                shape.classList.add('shape', randomShape);
+                let left = Math.random() * (window.innerWidth - 100);
+                let top = Math.random() * (window.innerHeight - 100);
+                shape.style.left = left + 'px';
+                shape.style.top = top + 'px';
+                background.appendChild(shape);
+                let speedX = (Math.random() - 0.5) * 1.2;
+                let speedY = (Math.random() - 0.5) * 1.2;
+                function moveShape() {
+                    left = parseFloat(shape.style.left) + speedX;
+                    top = parseFloat(shape.style.top) + speedY;
+                    if (left < 0 || left + shape.clientWidth > window.innerWidth - 100) {
+                        speedX = -speedX;
+                    }
+                    if (top < 0 || top + shape.clientHeight > window.innerHeight - 100) {
+                        speedY = -speedY;
+                    }
+                    shape.style.left = left + 'px';
+                    shape.style.top = top + 'px';
+                    requestAnimationFrame(moveShape);
+                }
+                requestAnimationFrame(moveShape);
+            }
+            for (let i = 0; i < 8; i++) {
+                createRandomShape();
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="btn">
+        <a href="#target1" class="buttons"><span>頁首</span></a>
+        <a href="#target2" class="buttons"><span>證照</span></a>
+        <a href="#target3" class="buttons"><span>學歷</span></a>
+    </div>
+    <div id="target1"></div>
+    <div class="header">
+        <div class="asd">
+            <p>姓名：廖健安</p>
+            <p>電話：0905-295-401</p>
+            <p>Gmail：s11143016@gmail.com</p>
+            <p>地址：花蓮縣花蓮市建國路二段880號</p>
+            <div class="pic2">
+                <a href="https://www.facebook.com/jian.an.9883">
+                    <img class="fb" src="fbicon.png">
+                </a>
+                <a href="https://www.instagram.com/shirrlleyy.com.tw/">
+                    <img src="igicon.png">
+                </a>
+            </div>
+            <div class="self">
+                <p> 自我介紹可以說是有著成為常識的趨勢。
+                    要想清楚，自我介紹，到底是一種怎麼樣的存在。
+                    透過逆向歸納，得以用最佳的策略分析自我介紹。
+                    夏寧曾說，活著，要有自己的價值，要作為一個強者存在於這個世界。
+                    請諸位將這段話在心中默念三遍。
+                    其中，趙金珊說了一句很響的話，
+                    科學，本質上來說，是歷史的；歷史的繼承和批判，無疑是科學的重要特徵。
+                    這句話幾乎是解讀產生問題的根本之一。
+                    若沒有自傳的存在，那麼後果可想而知。</p>
+            </div>
+
+            
+            <div class="pic">
+                <img src="http://127.0.0.1:5500/77777.png">
+            </div>
+        </div>
+        <div class="square1">
+        </div>
+        <div class="square2">
+        </div>
+        <div class="circle1">
+            <a href="ccv.html">
+                <p>履 歷 表</p>
+            </a>
+        </div>
+    </div>
+    <div id="target2"></div>
+    <div class="about">
+        <h2>--------------------技能 & 專業--------------------</h2>
+        <p>在搞笑界和資訊領域獲得的小小成果</p>
+        <div class="wrap">
+            <div class="item">
+                <img src="https://www.pngitem.com/pimgs/m/664-6644509_icon-react-js-logo-hd-png-download.png">
+                <h3>React</h3>
+                <p>就像我的笑話</p>
+                <p>熟悉核心概念和開發流程</p>
+                <p>並且具備相關的證照</p>
+                <p>這證明了我在此領域的專業知識</p>
+            </div>
+            <div class="item">
+                <img src="https://img.ttshow.tw/images/media/uploads/2018/12/07/4_a5zOH5f.PNG">
+                <h3>幽默的紳士</h3>
+                <p>熟練掌握表演技巧</p>
+                <p>具備優雅的舞台表現能力</p>
+                <p>包括滑稽動作和口才</p>
+                <p>以幽默風格創造幽默笑話和故事</p>
+            </div>
+            <div class="item">
+                <img src="https://assets.juksy.com/files/articles/94229/800x_100_w-5d73c1253b0e8.jpg">
+                <h3>主持人</h3>
+                <p>擔任喜劇節目的主持人</p>
+                <p>為觀眾帶來歡樂的體驗</p>
+                <p>能夠引導節目的節奏和氛圍</p>
+                <p>進行風趣的對話和互動</p>
+            </div>
+        </div>
+    </div>
+    <div id="target3"></div>
+    <div class="timeline">
+        <h5>--------------------學歷--------------------</h5>
+        <div class="event et1">
+            <div class="line"></div>
+            <div class="bullet left"></div>
+            <div class="event-content">
+                <h3>慈濟科大</h3>
+                <ul>
+                    <li>左左右右</li>
+                    <li>波潑摸佛</li>
+                </ul>
+            </div>
+        </div>
+        <!-- <img class="etimg img1" src="https://techexpo.moe.edu.tw/search/images/upload/schools/87/b/2021070107523501_1.jpg"> -->
+
+        <div class="event et2">
+            <div class="line"></div>
+            <div class="bullet left"></div>
+            <div class="event-content">
+                <h3>花蓮高工</h3>
+                <ul>
+                    <li>左左右右</li>
+                    <li>波潑摸佛</li>
+                </ul>
+            </div>
+        </div>
+        <!-- <img class="etimg img2" src="https://i.ytimg.com/vi/FCrkGNIrZ_s/maxresdefault.jpg"> -->
+
+        <div class="event et3">
+            <div class="line"></div>
+            <div class="bullet left"></div>
+            <div class="event-content">
+                <h3>花崗國中</h3>
+                <ul>
+                    <li>左左右右</li>
+                    <li>波潑摸佛</li>
+                </ul>
+            </div>
+        </div>
+        <!-- <img class="etimg img3" src="https://techexpo.moe.edu.tw/search/images/upload/schools/87/b/2021070107523501_1.jpg"> -->
+
+    </div>
+
+</body>
+
+</html>
